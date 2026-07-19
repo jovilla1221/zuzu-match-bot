@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+.env
+.env.*
+
+# Database
+*.db
+*.db-*
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Distribution / Packaging
+dist/
+build/
+*.egg-info/
+
+# Backups
+backups/
+*.bak
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+htmlcov/
+.coverage
+
+# Test
+.pytest_cache/
+.tox/
+
+# Type checking
+.mypy_cache/
+
+# Local config
+.env.local
+.env.production

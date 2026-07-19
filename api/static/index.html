@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Zuzu Match Mini App</title>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Glassmorphism Header -->
+        <header class="app-header glass-card">
+            <div class="brand">
+                <span class="brand-logo">💖 Zuzu Match</span>
+                <span class="badge-tier" id="user-tier">Newbie 🌱</span>
+            </div>
+            <div class="user-stats">
+                <span class="stat-pill">🔥 <span id="user-streak">0</span>d</span>
+                <span class="stat-pill">⚡ <span id="user-spark">10</span></span>
+            </div>
+        </header>
+
+        <!-- Main Profile Card -->
+        <main class="main-content">
+            <section class="profile-card glass-card">
+                <div class="avatar-wrapper">
+                    <img id="profile-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Profile Avatar" class="avatar-img">
+                    <span class="verified-badge" id="verified-icon">✨</span>
+                </div>
+                <h2 id="display-name" class="user-name">Adventurer</h2>
+                <p id="user-level-info" class="user-subtitle">Level 1 (0 / 50 EXP)</p>
+
+                <!-- Progress Bar -->
+                <div class="progress-container">
+                    <div class="progress-bar-fill" id="exp-bar" style="width: 0%;"></div>
+                </div>
+
+                <!-- Bio Input Form -->
+                <div class="section-box">
+                    <label for="bio-input" class="section-title">✍️ Bio Profil</label>
+                    <textarea id="bio-input" class="input-field" placeholder="Ceritakan tentang hobimu, kutipan favorit, atau tipe favoritmu..." rows="3"></textarea>
+                    <button id="save-bio-btn" class="btn btn-primary">Simpan Bio (+30 EXP)</button>
+                </div>
+
+                <!-- Interest Tags Grid -->
+                <div class="section-box">
+                    <h3 class="section-title">🎯 Tag Minat & Hobi (Pilih min. 3)</h3>
+                    <div id="interests-grid" class="tags-grid"></div>
+                    <button id="save-interests-btn" class="btn btn-secondary">Simpan Minat (+30 EXP)</button>
+                </div>
+
+                <!-- Preferences Form -->
+                <div class="section-box">
+                    <h3 class="section-title">⚙️ Preferensi Pencarian</h3>
+                    <div class="form-group">
+                        <label for="gender-select">Target Gender:</label>
+                        <select id="gender-select" class="input-field">
+                            <option value="MALE">Pria 👨</option>
+                            <option value="FEMALE">Wanita 👩</option>
+                            <option value="ALL">Semua Gender 🌈</option>
+                        </select>
+                    </div>
+                    <button id="save-prefs-btn" class="btn btn-accent">Simpan Preferensi (+30 EXP)</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>Zuzu Match Mini App • Ekosistem Gamifikasi Telegram</p>
+        </footer>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>

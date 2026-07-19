@@ -1,0 +1,15 @@
+[Unit]
+Description=Zuzu Match Telegram Bot Service
+After=network.target postgresql.service redis.service
+
+[Service]
+Type=simple
+User=filla_saputro
+WorkingDirectory=/home/filla_saputro/zuzu-bot
+ExecStart=/home/filla_saputro/zuzu-bot/.venv/bin/python3 -m scripts.run_bot
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target

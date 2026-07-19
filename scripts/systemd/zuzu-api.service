@@ -1,0 +1,15 @@
+[Unit]
+Description=Zuzu Match FastAPI Server Service
+After=network.target postgresql.service redis.service
+
+[Service]
+Type=simple
+User=filla_saputro
+WorkingDirectory=/home/filla_saputro/zuzu-bot
+ExecStart=/home/filla_saputro/zuzu-bot/.venv/bin/uvicorn api.main:app --host 127.0.0.1 --port 8000 --workers 2
+Restart=always
+RestartSec=5
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
