@@ -51,3 +51,7 @@ htmlcov/
 # Local config
 .env.local
 .env.production
+node_modules/
+*.db-shm
+*.db-wal
+*.session
